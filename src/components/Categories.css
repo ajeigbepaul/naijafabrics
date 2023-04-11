@@ -1,0 +1,32 @@
+.categories{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgb(12, 12, 12);
+    overflow-x:none;
+    /* align-items:center; */
+    height: 40vh;
+}
+.categories__category{
+    display: flex;
+    width: 100%;
+    padding: 25px;
+    padding-top: 10px;
+    padding-left: 32px;
+    align-items:center;
+    /* margin-left:50px; */
+    overflow-x:none;
+    /* align-items:center;
+    justify-content: center; */
+}
+.categories h2{
+    text-align: center;
+    font-size: 36px;
+    font-family:"Lato", sans-serif ;
+    padding:25px 0px;
+    color:aliceblue;
+}
+
+@media screen and (max-width: 380px){
+    .categories__category{padding: 0px; flex-direction: column;}
+  }
