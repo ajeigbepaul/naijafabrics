@@ -5,12 +5,18 @@ import SearchIcon from "@mui/icons-material/Search";
 import { Link } from "react-router-dom";
 
 function Product({ product }) {
+  console.log(product)
   return (
     <div className="product">
       <div className="product__circle"></div>
       <div className="product__img">
         <img src={product.image.url} alt="products" />
         <div className="product__inf">
+          <div className="product__tit">
+            {product.title}
+          </div>
+          <div className="product__infowrap">
+
           <div className="product__pristock">
             <span className="prod__price">
               {" "}
@@ -28,6 +34,7 @@ function Product({ product }) {
               <ShoppingBagOutlinedIcon className="shopicon" />
             </div>
           </Link>
+          </div>
         </div>
       </div>
       {/* <div className="product__inf">

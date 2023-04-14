@@ -52,7 +52,7 @@ function Products({ filtercolors, filtersize, sort, cat }) {
  
   return (
     <div className="products">
-      <h2>Popular Product</h2>
+      <h2>Finest African Designs</h2>
       <div className="products__product">
         {cat
           ? filteredproducts?.map((item) => (

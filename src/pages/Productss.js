@@ -29,7 +29,7 @@ function Productss() {
   const [images, setImages] = useState([])
 
 
-  const [qty, setQty]= useState(5)
+  const [qty, setQty]= useState(1)
 
   useEffect(()=>{
    const getProduct = async()=>{
@@ -94,9 +94,8 @@ function Productss() {
             ) : (
               <span>sold out</span>
             )}
-
-            {/* <h2>{product.title}</h2> */}
           </div>
+          <h2>{product.title}</h2>
           <div className="productss__desc">
             <p>{product.description}</p>
           </div>
@@ -110,9 +109,10 @@ function Productss() {
           </div>
           <div className="productfilter__container">
             <div className="productfilter">
-              <h2>Colors</h2>
+              <h2>Colors : </h2>{" "}
               <div className="filter__color">
-                <FilterColor color={product.colors} />
+                {/* <FilterColor color={product.colors} /> */}
+                {product.colors}
               </div>
             </div>
             <div className="productfilter">
@@ -127,7 +127,6 @@ function Productss() {
           </div>
         </div>
       </div>
-      <Newsletter />
       <Footer />
     </div>
   );

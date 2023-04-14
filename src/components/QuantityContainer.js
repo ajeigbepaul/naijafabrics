@@ -6,9 +6,9 @@ import "./Quantity.css"
 function QuantityContainer({qty, setQty}) {
   const handleQuantity =(type)=>{
     if(type === "desc"){
-     qty > 5 && setQty(qty - 5)
+     qty > 1 && setQty(qty - 1)
     }else{
-     setQty(qty + 5)
+     setQty(qty + 1)
     }
    }
   return (
