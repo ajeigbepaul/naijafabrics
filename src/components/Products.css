@@ -1,8 +1,10 @@
 .products{
     display: flex;
     width: 100%;
+    max-width: 1300px;
+    margin:0px auto;
     flex-direction: column;
-    margin:20px 0px;
+    /* margin:20px 0px; */
     /* background-color: rgb(12, 12, 12); */
     /* background-color: rgb(59, 37, 59); */
 }
@@ -10,8 +12,9 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr) ;
     width: 100%;
-    padding: 25px;
+    /* padding: 25px; */
     padding-top: 50px;
+    padding-bottom: 50px;
     flex-wrap: wrap;
 }
 .products h2{

@@ -4,6 +4,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./Banner.css";
 import { CategoryData } from "../utils/CategoryData";
 import { Link } from "react-router-dom";
+import SwipableBanner from "./SwipableBanner";
+import Adverts from "./Adverts";
 function Banner() {
   return (
     <div className="slider">
@@ -19,7 +21,7 @@ function Banner() {
         ))}
       </div>
       <div className="hero__center">
-        <Carousel
+        {/* <Carousel
           className=""
           infiniteLoop
           useKeyboardArrows
@@ -41,10 +43,22 @@ function Banner() {
               </div>
             </div>
           ))}
-        </Carousel>
+        </Carousel> */}
+        <SwipableBanner />
       </div>
       <div className="hero__right">
-        <h2>Buy something</h2>
+        <div className="hero__rightheader">Place Your Adverts</div>
+        {/* Adverts Components */}
+        <Adverts
+          url="http://www.youtube.com/embed/xDMP3i36naA"
+          title="Tosh Watch"
+          link="https://tushwatch.com"
+        />
+        <Adverts
+          url="http://www.youtube.com/embed/xDMP3i36naA"
+          title="Monique Fab"
+          link="https://monique.com"
+        />
       </div>
     </div>
   );

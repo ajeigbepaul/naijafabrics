@@ -8,8 +8,8 @@ function Slider({ image, title, desc, category }) {
       <div className="slider__image">
         {<img src={image} alt="sliderimages" />}
         <div className="sliderinfo">
-          <h1>{title}</h1>
-          <span>{desc}</span>
+          <h1>{desc}</h1>
+          <span>{title}</span>
 
           <button><Link to={`/products/${category}`}>Shop Now</Link></button>
         </div>

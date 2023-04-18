@@ -35,7 +35,9 @@
   padding: 10px 10px;
   font-size: 14px;
   font-family: "Lato", sans-serif;
-  color:rgb(214, 198, 52);
+  /* color:rgb(214, 198, 52); */
+  color:rgb(177, 202, 37);
+  /* background-color: rgba(207, 208, 188, 0.4);; */
   background-color: rgba(56, 53, 56, 0.693);
   
 }

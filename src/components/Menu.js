@@ -12,7 +12,10 @@ import useAuth from "../hooks/useAuth";
 // import {clearCart} from "../redux/cartRedux"
 
 import "./Menu.css"
+import { useSelector } from "react-redux";
+import { selectItems } from "../slice/basketSlice";
 function Menu() {
+const items = useSelector(selectItems)
 const [show,setShow] = useState(false)
 const logout = useLogout()
 const navigate = useNavigate()
@@ -35,7 +38,7 @@ const handleLogout = async()=>{
             <div className="nav__reg">HOME</div>
           </Link>
         </div>
-      
+
         <div className="menu__account">
           <FaUser className="account__icon" />
           {auth?.email ? (
@@ -49,24 +52,49 @@ const handleLogout = async()=>{
 
         <div>
           <Link to="/cart">
-            <Badge
-              badgeContent="4"
-              // badgeContent={quantity}
-              color="warning"
-              className="badge__color"
-            >
-              <LocalMallOutlinedIcon />
-            </Badge>
+            {items.length ? (
+              <Badge
+                badgeContent={items.length}
+                color="warning"
+                className="badge__color"
+              >
+                <LocalMallOutlinedIcon />
+              </Badge>
+            ) : (
+              <Badge badgeContent="0" color="warning" className="badge__color">
+                <LocalMallOutlinedIcon />
+              </Badge>
+            )}
+
+            {/* {items ? (
+              <Badge
+                badgeContent={items?.length}
+                color="warning"
+                className="badge__color"
+              >
+                <LocalMallOutlinedIcon />
+              </Badge>
+            ) : (
+              <Badge
+                badgeContent="1"
+                color="warning"
+                className="badge__color"
+              >
+                <LocalMallOutlinedIcon />
+              </Badge>
+            )} */}
           </Link>
         </div>
       </div>
       {show && (
         <div className="account__dropdown">
           {auth?.email ? (
-            <button className="account__btn">Logout</button>
+            <button className="account__btn" onClick={handleLogout}>
+              Logout
+            </button>
           ) : (
             <Link to="/login" className="account__btn">
-              <button >Sign In</button>
+              <button>Sign In</button>
             </Link>
           )}
 

@@ -3,13 +3,14 @@ import Announcement from "../components/Announcement";
 import FilterColor from "../components/FilterColor";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import Newsletter from "../components/Newsletter";
 import "./Productss.css";
 import QuantityContainer from "../components/QuantityContainer";
 import { useLocation } from 'react-router-dom'
 import { publicRequest } from "../requestMethods";
 import {useDispatch} from "react-redux"
-import {addCart} from "../redux/cartRedux"
+import { addToBasket } from "../slice/basketSlice";
+import { toast } from "react-hot-toast";
+import useAuth from "../hooks/useAuth";
 // toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')
 // moment(new Date(row.time)).format("YYYY-MM-DD")}
 
@@ -20,7 +21,8 @@ import {addCart} from "../redux/cartRedux"
 // SUB FROM THE PRICE IN THE CARTREDUX
 // FINISHED
 function Productss() {
-  // const dispatch = useDispatch()
+  const {qty} = useAuth() 
+  const dispatch = useDispatch();
   const location  = useLocation()
   const id = location.pathname.split("/")[2]
 
@@ -29,8 +31,15 @@ function Productss() {
   const [images, setImages] = useState([])
 
 
-  const [qty, setQty]= useState(1)
+ 
 
+  // HANDLES ADD TO CART BASKET.
+  const handleAddToCart = (e) => {
+  const refreshToastnotify = toast.loading("Loading...");
+  e.preventDefault();
+  dispatch(addToBasket({...product,qty}));
+  toast.success("added to cart!!", { id: refreshToastnotify });
+};
   useEffect(()=>{
    const getProduct = async()=>{
     try {
@@ -121,9 +130,10 @@ function Productss() {
             </div>
           </div>
           <div className="productaddContainer">
-            <QuantityContainer qty={qty} setQty={setQty} />
-            <div className="addToCart">ADD TO CART</div>
-            {/* onClick={handleAddToCart} */}
+            <QuantityContainer />
+            <div className="addToCart" onClick={handleAddToCart}>
+              ADD TO CART
+            </div>
           </div>
         </div>
       </div>

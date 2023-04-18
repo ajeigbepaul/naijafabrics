@@ -1,0 +1,42 @@
+.material__container{
+    width: 100%;
+    max-width: 1300px;
+    height: 60vh;
+    margin:0px auto;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+.material__header{
+    margin-bottom: 25px;
+}
+.material__content{
+    background-color: rgb(61, 57, 57);
+    height: 50vh;
+    background-image: url("../../public/images/ankaramaterial.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.material__header{text-align: center; padding: 20px 0px; font-size: 36px;
+    font-family: "Lato", sans-serif;}
+.material__contentheader{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    font-size: 60px;
+    /* padding-top: 10%; */
+    color: rgb(255, 255, 255);
+    background-color: rgb(192, 223, 106, 0.5);
+    padding:10px 15px;
+}
+.material__contentpara{width: 18%; background-color:rgb(192, 223, 106, 0.9) ; text-align: center; margin-top: 10px; padding:10px 15px; color: rgb(74, 70, 70); font-size: 18px;}
+.material__contentbtn{padding: 10px 15px; outline: none; border: none; background-color: rgb(192, 223, 106,0.5); margin-top: 10px; border-radius: 20px; color:white; box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.5); cursor: pointer; transition: all ease 0.5s; font-weight: 400; font-size: 18px;}
+.material__contentbtn:hover{
+    transform: translateY(-5px);
+}

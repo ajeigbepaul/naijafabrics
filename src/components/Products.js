@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Products.css";
 import Product from "./Product";
+import { motion } from "framer-motion";
 import axios from "axios";
 
 
@@ -52,7 +53,17 @@ function Products({ filtercolors, filtersize, sort, cat }) {
  
   return (
     <div className="products">
-      <h2>Finest African Designs</h2>
+      <motion.h2
+        initial={{
+          opacity: 0,
+          y: -200,
+        }}
+        transition={{ duration: 1.5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        // animate={{}}
+      >
+        Finest African Designs
+      </motion.h2>
       <div className="products__product">
         {cat
           ? filteredproducts?.map((item) => (

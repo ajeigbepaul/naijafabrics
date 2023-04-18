@@ -1,7 +1,7 @@
 .swipablebanner {
-  /* width: 50%; */
-  height: 50vh;
-  background-color: red;
+  width: 100%;
+  height: 80vh;
+  max-width: 900px;
 }
 .swiper-button-next:after, .swiper-button-prev:after{
   color:grey!important;
@@ -19,9 +19,9 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   opacity: 1;
 }
 .mySwiper {
-  width: 50%;
+  width: 100%;
   background-color: #fff;
-  height: 60vh;
+  height: 80vh;
   /* padding-top: 100px;
   padding-bottom: 200px; */
   /* margin-left: auto;
@@ -49,23 +49,23 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 }
 .slider img {
   width: 100%;
-  height: 60vh;
-  object-fit: cover;
+  height: 80vh;
+  object-fit: contain;
 }
 .slider__image {
   position: relative;
-  width: 50%;
-  height: 60vh;
+  width: 100%;
+  height: 80vh;
 }
 .sliderinfo {
   position: absolute;
   top: 20vh;
-  left: 30px;
+  left: 25px;
   padding: 20px;
   height: 200px;
   width: 50%;
   max-width: 400px;
-  background-color: rgb(254, 212, 38, 0.4);
+  background-color: rgba(207, 208, 188, 0.4);
   margin-left: 20px;
   display: flex;
   flex-direction: column;
@@ -76,6 +76,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   font-family: "Lato", sans-serif;
   font-weight: 700;
   color: rgb(41, 30, 30);
+  /* color:rgb(121, 184, 40) ; */
 }
 .sliderinfo span {
   font-size: 16px;
@@ -89,13 +90,13 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   margin-top: 20px;
   width: 100px;
   margin-left: 35%;
-  background-color: rgb(41, 30, 30);
-  /* background-color: rgb(190, 53, 129); */
-  color: white;
+  /* background-color: rgb(41, 30, 30); */
+  background-color: rgb(177, 202, 37);
+  color: white!important;
   cursor: pointer;
   transition: all ease 0.5s;
 }
-.sliderinfo button a{color:white;}
+.sliderinfo button a{color:white!important;}
 .sliderinfo button:hover {
   transform: translateY(6px);
 }

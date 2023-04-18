@@ -1,6 +1,7 @@
-.cart__wrapper{padding: 20px;}
+.cart__wrapper{padding: 20px; width: 100%; max-width: 1200px; margin:0px auto;}
 .cart__title h2{font-weight: 400; text-align: center; font-size: 24px; font-family:"Lato", sans-serif ;}
 .cart__top{display: flex; align-items: center; justify-content: space-between; padding: 20px;}
+/* .cart__bottom{border-bottom: 2px solid gray;} */
 .cart__topbutton1,.cart__topbutton2{padding: 10px 20px; cursor: pointer;}
 .cart__topbutton1{border: 2px solid black; background-color: transparent;}
 .cart__topbutton2{border: none; background-color: #333; color:aliceblue; transition: all ease 0.5s;}
@@ -9,7 +10,7 @@
 .cart__bottom{display: flex; justify-content: space-between; align-items: center;}
 .cart__info{flex: 3;}
 .cart__summary{flex:1; padding:0px 10px;}
-.cart__product{display: flex; justify-content: space-between; margin:5px 0px}
+.cart__product{display: flex; justify-content: space-between; margin:5px 0px; border-bottom: 1px solid gray; background-color: rgb(255, 255, 255);padding:15px 10px;}
 .cart__productdetails{flex: 2; display: flex;}
 .cart__productdetails img{width: 140px; height: 150px; object-fit: contain;}
 .cart__details{display: flex; flex-direction: column; padding: 20px; justify-content: space-around;}
@@ -20,7 +21,29 @@
 .total{font-weight: 600; font-size: 24px;}
 .cart_btn{padding: 10px 20px; border: none; outline: none; background-color: #333; transition: all ease 0.5s; color: white; cursor: pointer; width: 100%; font-weight: 600;}
 .cart_btn:hover{color: aliceblue;}
-
+.addbtn{
+    padding:5px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: grey;
+    background-color: rgb(252, 252, 252);
+    border: 1px solid rgb(165, 165, 165);
+    margin-bottom: 5px;
+    border-radius: 15px;
+    
+}
+.deletebtn{
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: red;
+    background-color: rgb(51, 49, 49);
+    border-radius: 15px;
+    
+}
+.cartbutton{display: flex; flex-direction: column;}
 @media screen and (max-width:380px) {
     .cart__wrapper{padding: 10px;}
     .cart__toptext{display: none;}

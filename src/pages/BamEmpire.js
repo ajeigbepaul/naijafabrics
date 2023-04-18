@@ -7,6 +7,7 @@ import "./BamEmpire.css"
 import Products from '../components/Products'
 import Newsletter from '../components/Newsletter'
 import Footer from '../components/Footer'
+import Materials from '../components/Materials'
 
 
 
@@ -19,6 +20,7 @@ function BamEmpire() {
     <Banner/>
     <Categories/>
     <Products/>
+    <Materials/>
     {/* <Newsletter/> */}
     <Footer/>
     </div>
