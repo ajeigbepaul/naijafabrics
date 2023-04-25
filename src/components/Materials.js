@@ -1,7 +1,24 @@
-import React from 'react'
-import { motion } from 'framer-motion';
-import "./Materials.css"
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import "./Materials.css";
+import axios from "../api/axios";
+import Ankara from "./Ankara";
 function Materials() {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    const getProduct = async () => {
+      try {
+        // const res = await axios.get(
+        //   cat
+        //     ? `https://bamempirebackend-production.up.railway.app/products?category=${cat}`
+        //     : "https://bamempirebackend-production.up.railway.app/products"
+        // );
+        const res = await axios.get(`http://localhost:8000/ankaras`);
+        setProducts(res.data);
+      } catch (error) {}
+    };
+    getProduct();
+  }, []);
   return (
     <div className="material__container">
       <motion.h2
@@ -24,8 +41,19 @@ function Materials() {
         </p> */}
         <button className="material__contentbtn">Explore</button>
       </div>
+      <div className="ankara__wrapper">
+        <div className="ankara__container">
+          {products.slice(0, 10).map((product) => (
+            <Ankara products={product} />
+          ))}
+        </div>
+        <div className="mat__btn">
+          {" "}
+          <button className="material__btn">View ALL</button>
+        </div>
+      </div>
     </div>
   );
 }
 
-export default Materials
+export default Materials;

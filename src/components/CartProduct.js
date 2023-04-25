@@ -26,22 +26,24 @@ function CartProduct({product}) {
         <div className="cart__productdetails">
           <img src={image?.url} alt="productimage" />
           <div className="cart__details">
-            <span className="productname">
-              <b>Product Name:</b> {title}
-            </span>
+            <span className="productname">{title}</span>
             <span className="productid">
-              <b>ID:</b> {_id}
+              ID: {_id}
             </span>
-            {instock === "yes" ? <span>instock</span> : <span>sold out</span>}
+            {instock === "yes" ? (
+              <span className="cart__instock">instock</span>
+            ) : (
+              <span className="cart__outstock">sold out</span>
+            )}
             {/* <FitlerColor color={colors} /> */}
             <span className="price">
-              Price:{" "}
+              {/* Price:{" "} */}₦{" "}
               {(price * product.qty)
                 .toFixed(2)
                 .replace(/\d(?=(\d{3})+\.)/g, "$&,")}
             </span>
             <span className="productsize">
-              <b>Product Size:</b> {size}
+              Product Size: {size}
             </span>
           </div>
         </div>

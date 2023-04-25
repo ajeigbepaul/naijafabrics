@@ -12,9 +12,10 @@ import { toast } from "react-hot-toast";
 import useAxiosPrivate from "../hooks/useAxios";
 import Navbar from "../components/Navbar";
 import Sidenav from "./Sidenav";
-import "./CreateProduct.css";
+import "./CreateAnkara.css";
+import SelectAnkaraSize from "../components/SelectAnkaraSize";
 
-const CreateProduct = () => {
+const CreateAnkara = () => {
   const axiosPrivate = useAxiosPrivate();
   const [productImg, setProductImg] = useState("");
   const [title, setTitle] = useState("");
@@ -43,13 +44,10 @@ const CreateProduct = () => {
     }
   };
   const createPdt = async () => {
-    const response = await axiosPrivate.post("/products", {
-      title,
+    const response = await axiosPrivate.post("/ankaras", {
       description,
       price,
       discprice,
-      colors,
-      categories,
       size,
       instock,
       moq,
@@ -64,9 +62,6 @@ const CreateProduct = () => {
     createPdt();
     toast.success("uploaded successfully", { id: refreshToastnotify });
     setProductImg("");
-    setCategories("");
-    setColors("");
-    setTitle("");
     setDescription("");
     setPrice("");
     setSize("");
@@ -81,11 +76,11 @@ const CreateProduct = () => {
         <div className="create__productSidenav">
           <Sidenav />
         </div>
-        <div className="create__productcontainer">
+        <div className="create__ankaracontainer">
           {/* Form */}
-          <div className="create__form">
+          <div className="create__ankaraform">
             <StyledForm onSubmit={handleSubmit} encType="multipart/form-data">
-              <h3>Create a Product</h3>
+              <h3>Create a Ankara Products</h3>
               <input
                 id="imgUpload"
                 accept="image/*"
@@ -93,12 +88,7 @@ const CreateProduct = () => {
                 onChange={handleProductImageUpload}
                 required
               />
-              <Input
-                placeholder="Title"
-                type="text"
-                onChange={(e) => setTitle(e.target.value)}
-                value={title}
-              />
+             
               <Input
                 placeholder="Description"
                 type="text"
@@ -117,26 +107,18 @@ const CreateProduct = () => {
                 onChange={(e) => setDiscPrice(e.target.value)}
                 value={discprice}
               />
-              <Input
-                placeholder="Colors"
-                type="text"
-                onChange={(e) => setColors(e.target.value)}
-                value={colors}
-              />
+             
               <Input
                 placeholder="MOQ(Minimum Order Quantity"
                 type="text"
                 onChange={(e) => setMoq(e.target.value)}
                 value={moq}
               />
-              <SelectSize
+              <SelectAnkaraSize
                 onChange={(e) => setSize(e.target.value)}
                 value={size}
               />
-              <SelectInput
-                onChange={(e) => setCategories(e.target.value)}
-                value={categories}
-              />
+            
               <SelectStock
                 onChange={(e) => setInStock(e.target.value)}
                 value={instock}
@@ -144,7 +126,7 @@ const CreateProduct = () => {
               <PrimaryButton type="submit">Creat product</PrimaryButton>
             </StyledForm>
           </div>
-          <div className="create__preview">
+          <div className="create__ankarapreview">
             <ImagePreview>
               {productImg ? (
                 <>
@@ -162,7 +144,7 @@ const CreateProduct = () => {
   );
 };
 
-export default CreateProduct;
+export default CreateAnkara;
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
@@ -190,10 +172,10 @@ const StyledForm = styled.form`
 `;
 
 const ImagePreview = styled.div`
-  margin-top:50px;
+  margin-top: 50px;
   padding: 2rem;
   border: 1px solid rgb(183, 183, 183);
-  border-radius:15px;
+  border-radius: 15px;
   max-width: 300px;
   width: 100%;
   display: flex;

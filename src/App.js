@@ -29,6 +29,8 @@ import NotAllowed from "./components/NotAllowed";
 import RequiredAuth from "./components/RequiredAuth";
 import Missing from "./components/Missing";
 import ProtectedRoute from "./components/ProtectedRoutes";
+import CreateAnkara from "./admin/CreateAnkara";
+import Ankaras from "./pages/Ankaras";
 
 
 function App() {
@@ -47,6 +49,7 @@ function App() {
           {/* General user */}
           <Route path="/products/:category" element={<ProductList />} />
           <Route path="/product/:id" element={<Productss />} />
+          <Route path="/ankara/:id" element={<Ankaras />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/pay" element={<Paystack />} />
           <Route path="/payment" element={<Payment />} />
@@ -56,6 +59,7 @@ function App() {
         <Route element={<ProtectedRoute allowedRoles={[2002]} />}>
           <Route exact path="/admindashboard" element={<Dashboard />} />
           <Route path="/createproducts" element={<CreateProduct />} />
+          <Route path="/createankara" element={<CreateAnkara />} />
           <Route path="/product" element={<Products />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/summary" element={<Summary />} />

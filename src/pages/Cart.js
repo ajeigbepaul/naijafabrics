@@ -6,14 +6,14 @@ import Footer from "../components/Footer";
 import CartProduct from "../components/CartProduct";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { selectItems } from "../slice/basketSlice";
+import { selectItems, selectTotal, selectTot } from "../slice/basketSlice";
 import useAuth from "../hooks/useAuth";
 
 
 function Cart() {
   const {auth} = useAuth()
-  const items = useSelector(selectItems)
-  console.log(items)
+   const items = useSelector(selectItems);
+  const total = useSelector(selectTot);
   const navigate = useNavigate()
 
   return (
@@ -59,13 +59,15 @@ function Cart() {
                 {/* {(items?.total)
                   .toFixed(2)
                   .replace(/\d(?=(\d{3})+\.)/g, "$&,")}{" "} */}
-                  4,000
+                0
               </div>
             </div>
             <div className="summary__items total">
               <div className="summary__itemsubtotal ">Total</div>
-              {/* {items?.total.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')} */}
-              <div className="summary__itemprice"> 5,000 </div>
+
+              <div className="summary__itemprice">
+                ₦ {total?.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,")}
+              </div>
             </div>
             {auth ? (
               <Link to="/payment">

@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   items: [],
- 
+  quantity: 0,
+  total: 0,
 };
 
 export const basketSlice = createSlice({
@@ -11,7 +12,9 @@ export const basketSlice = createSlice({
     reducers:{
         // Actions.
         addToBasket:(state, action)=>{
+            state.quantity += 1;
             state.items = [...state.items, action.payload];
+            state.total += action.payload.price * action.payload.qty;
         },
         removeFromBasket:(state,action)=>{
             const index = state.items.findIndex(item=>item._id === action.payload._id)
@@ -22,6 +25,8 @@ export const basketSlice = createSlice({
                 console.warn(`cannot delete ${action.payload._id}. It does not exit`)
             }
             state.items = newBasket
+            state.quantity -= 1;
+            state.total += action.payload.price * action.payload.qty;
         },
         deleteBasket:(state,action)=>{
             state.items = []
@@ -32,5 +37,8 @@ export const basketSlice = createSlice({
 export const {addToBasket, removeFromBasket} = basketSlice.actions
 // How we pull information from the Global state
 export const selectItems = (state) => state.basket.items
+export const selectTot = (state) => state.basket.total;
+
+export const selectTotal = (state) => state.basket.items.reduce((total, item)=>total + item.price,0)
 
 export default basketSlice.reducer
