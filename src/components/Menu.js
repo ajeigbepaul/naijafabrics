@@ -31,7 +31,7 @@ const handleLogout = async()=>{
 }
   return (
     <>
-      <div className="col-sm-12 col-md-12 pt-3 screen__M">
+      <div className="col-sm-12 col-md-12 pt-2 screen__M">
         <div>
           <Link to="/" className="nav__reg">
             <FaHome className="home__icon" />
