@@ -21,7 +21,7 @@ export const CategoryData = [
   {
     id: 3,
     img: "/images/ankaramaterial.jpg",
-    title: "Ankara Materials",
+    title: "Ankara",
     cat: "materials",
     desc: "Shop quality products",
     Icon: <FaFemale />,

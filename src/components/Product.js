@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Product.css";
-import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
+import {FiShoppingCart} from "react-icons/fi"
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToBasket } from "../slice/basketSlice";
@@ -31,7 +31,7 @@ function Product({ product }) {
                 ₦{" "}
                 {product.price?.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,")}
               </span>{" "}
-              <span className="prod__moq">MOQ of {product.moq}</span>{" "}
+              {/* <span className="prod__moq">MOQ of {product.moq}</span>{" "} */}
               {product.instock === "yes" ? (
                 <span className="prod__instock">instock</span>
               ) : (
@@ -39,10 +39,7 @@ function Product({ product }) {
               )}
             </div>
             <div className="product__iconcontainer">
-              <ShoppingBagOutlinedIcon
-                className="shopicon"
-                onClick={handleAddToCart}
-              />
+              <FiShoppingCart className="shopicon" onClick={handleAddToCart} />
             </div>
           </div>
         </div>

@@ -14,13 +14,11 @@
 .create__ankaracontainer {
     flex: .85;
     display: flex;
-    background-image: url("../ankarabgannouncement.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    /* background-color: red; */
-
-}
+    background-image: url("../../public/images/ankaramaterial.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
 
 .create__ankaraform {
     width: 50%;

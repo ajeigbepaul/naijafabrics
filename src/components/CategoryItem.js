@@ -6,8 +6,8 @@ import "./CategoryItem.css"
 function CategoryItem({category}) {
   return (
     <Link to={`/products/${category.cat}`}>
-      <div className="categoryItem__container">
-        <div className="categoryItem__img">
+      <div className="col-sm-12 col-md-12 categoryItem__container">
+        <div className=" col-sm-12 col-md-4 px-0 categoryItem__img">
           <motion.img
             initial={{
               x: -200,

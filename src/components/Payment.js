@@ -10,11 +10,13 @@ import { pay } from "../redux/apiRedux";
 import { order } from "../redux/apiRedux"
 import {clearCart} from "../redux/cartRedux"
 import useAuth from "../hooks/useAuth";
-import { selectItems, selectTot } from "../slice/basketSlice";
-
-
+import { selectItems, selectTot, clearBasket } from "../slice/basketSlice";
+import { addOrder } from "../slice/orderSlice";
+import { addPay } from "../slice/paySlice";
+import useAxiosPrivate from "../hooks/useAxios";
 import "./Payment.css";
 function Payment() {
+  const axiosPrivate = useAxiosPrivate()
   const { auth } = useAuth();
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -61,7 +63,7 @@ function Payment() {
   //
   // const products = {}
   const orderdata = {
-    userId: auth?._id,
+    userId: auth?.id,
     products: items,
     total: total,
     address: addressdata,
@@ -74,14 +76,33 @@ function Payment() {
     amount: total,
     reference: config.reference,
   };
+  const PostPay = async()=>{
+    try {
+       const response = await axiosPrivate.post("/payments", paydata);
+       const result = response.data
+       result && dispatch(addPay(paydata))
+      
+    } catch (error) {
+      console.log(error)
+    }
+   
+  }
+
+  const PostOrder = async () => {
+    try {
+      const response = await axiosPrivate.post("/orders", orderdata);
+      const result = response.data;
+      result && dispatch(addOrder(orderdata));
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const handlePaystackSuccessAction = (reference) => {
-    // pay(dispatch, paydata);
-    // order(dispatch, orderdata);
-    // dispatch(clearCart());
+    PostPay()
+    PostOrder()
+    dispatch(clearBasket())
     navigate("/success");
-
-    // navigate to success page.
   };
   // you can call this function anything
   const handlePaystackCloseAction = () => {

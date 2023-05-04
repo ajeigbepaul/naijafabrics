@@ -8,45 +8,25 @@ import SwipableBanner from "./SwipableBanner";
 import Adverts from "./Adverts";
 function Banner() {
   return (
-    <div className="slider">
-      <div className="hero__left">
-        <span className="hero__catTitle"> CATEGORY</span>
+    <div className="col-sm-12 col-md-11 mx-auto d-flex slider">
+      <div className="col-sm-12 col-md-2 hero__left">
+        <span className="col-sm-12 col-md-12 hero__catTitle">
+          {" "}
+          CATEGORY
+        </span>
         {CategoryData.map((cat) => (
           <Link to={`/products/${cat.cat}`}>
-            <div className="hero__category">
-              <div className="hero__icon">{cat.Icon}</div>
-              <span className="hero__title">{cat.title}</span>
+            <div className="col-sm-3 col-md-12 hero__category">
+                <div className="hero__icon">{cat.Icon}</div>
+                <span className="hero__title">{cat.title}</span>
             </div>
           </Link>
         ))}
       </div>
-      <div className="hero__center">
-        {/* <Carousel
-          className=""
-          infiniteLoop
-          useKeyboardArrows
-          autoPlay
-          showThumbs={false}
-          showStatus={false}
-          animation={{ effect: "fade" }}
-        >
-          {CategoryData.map((slide, idx) => (
-            <div key={idx} className="slider__hero">
-              <img src={slide.img} alt="hero" className="sliderImg" />
-              <div className="sliderinfo">
-                <h1>{slide.title}</h1>
-                <span>{slide.desc}</span>
-
-                <button>
-                  <Link to={`/products/${slide.cat}`}>Shop Now</Link>
-                </button>
-              </div>
-            </div>
-          ))}
-        </Carousel> */}
+      <div className="col-sm-12 col-md-8 hero__center">
         <SwipableBanner />
       </div>
-      <div className="hero__right">
+      <div className=" col-sm-12 col-md-2 hero__right">
         <div className="hero__rightheader">Place Your Adverts</div>
         {/* Adverts Components */}
         <Adverts

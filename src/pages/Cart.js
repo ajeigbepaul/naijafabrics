@@ -14,6 +14,7 @@ function Cart() {
   const {auth} = useAuth()
    const items = useSelector(selectItems);
   const total = useSelector(selectTot);
+  console.log(total)
   const navigate = useNavigate()
 
   return (

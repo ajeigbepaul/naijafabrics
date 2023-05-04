@@ -12,6 +12,10 @@
     flex:.85;
     display: flex;
     /* background-color: red; */
+    background-image: url("../../public/images/girlsAnkara1.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
 
 }
 .create__form{

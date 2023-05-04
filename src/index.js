@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import { store } from "./redux/store";
 import { BrowserRouter,Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/authProvider";
+import "bootstrap/dist/css/bootstrap.min.css";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <Provider store={store}>

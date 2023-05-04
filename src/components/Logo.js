@@ -4,8 +4,8 @@ import logo from "../ankaralogoo.png"
 function Logo() {
   return (
     // <h2 style={{color:'orange'}}>Naija Fabrics</h2>
-    <div className="nav__logo">
-      <img src={logo} alt="logo" />
+    <div className="col-sm-12 col-md-12 nav__logo">
+      {/* <img src={logo} alt="logo" />image */}image
     </div>
   );
 }

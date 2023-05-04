@@ -25,7 +25,30 @@
     /* color:#981ca3; */
     color:rgb(50, 50, 50);
 }
+.pro__btn {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0px auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
 
+.product__btn {
+    padding: 10px 7px;
+    border: none;
+    outline: none;
+    border: 2px solid rgb(57, 57, 57);
+    width: 150px;
+    background-color: transparent;
+    color: grey;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: 500;
+}
 @media screen and (max-width:380px) {
     .products__product{
         display: grid;

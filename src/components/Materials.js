@@ -39,7 +39,7 @@ function Materials() {
           When you talk about quality and durability, our Ankara is such that
           brings out the elegance, beauty and splendor of any design.
         </p> */}
-        <button className="material__contentbtn">Explore</button>
+        {/* <button className="material__contentbtn">Explore</button> */}
       </div>
       <div className="ankara__wrapper">
         <div className="ankara__container">

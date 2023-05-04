@@ -77,6 +77,10 @@ function Products({ filtercolors, filtersize, sort, cat }) {
               .slice(0, 10)
               ?.map((item) => <Product key={item.id} product={item} />)}
       </div>
+      <div className="pro__btn">
+        {" "}
+        <button className="product__btn">View ALL</button>
+      </div>
     </div>
   );
 }

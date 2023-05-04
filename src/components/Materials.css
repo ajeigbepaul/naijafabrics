@@ -56,13 +56,13 @@
     margin: 0px auto;
     display: flex;
     align-items: flex-end;
-    justify-content: end;
+    justify-content: flex-end;
     padding-right: 10px;
 }
 .material__btn{padding:10px 7px;
      border: none;
      outline: none;
-     border:2px solid rgb(195, 222, 43);
+     border:2px solid rgb(57, 57, 57);
      width: 150px;
      background-color: transparent;
      color: grey;

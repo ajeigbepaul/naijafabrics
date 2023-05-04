@@ -137,10 +137,10 @@ const CreateAnkara = () => {
               )}
             </ImagePreview>
           </div>
+          </div>
           {/* Preview */}
         </div>
       </div>
-    </div>
   );
 };
 
@@ -182,9 +182,13 @@ const ImagePreview = styled.div`
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  color: rgb(78, 78, 78);
+  color: #ffffff;
 
   img {
     max-width: 100%;
+  }
+  p {
+    background-color: rgb(50, 49, 50);
+    padding: 5px 10px;
   }
 `;

@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { toast } from 'react-hot-toast';
 import { addToBasket } from '../slice/basketSlice';
-import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
+import { FiShoppingCart } from "react-icons/fi";
+
 
 function Ankara({products}) {
     const dispatch = useDispatch();
@@ -30,7 +31,7 @@ function Ankara({products}) {
                 ₦{" "}
                 {products.price?.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,")}
               </span>{" "}
-              <span className="ankaraprod__moq">MOQ of {products.moq}</span>{" "}
+              {/* <span className="ankaraprod__moq">MOQ of {products.moq}</span>{" "} */}
               {products.instock === "yes" ? (
                 <span className="ankaraprod__instock">instock</span>
               ) : (
@@ -38,7 +39,7 @@ function Ankara({products}) {
               )}
             </div>
             <div className="ankaraproduct__iconcontainer">
-              <ShoppingBagOutlinedIcon
+              <FiShoppingCart
                 className="ankarashopicon"
                 onClick={handleAddToCart}
               />

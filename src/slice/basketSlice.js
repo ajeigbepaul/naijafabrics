@@ -28,17 +28,17 @@ export const basketSlice = createSlice({
             state.quantity -= 1;
             state.total += action.payload.price * action.payload.qty;
         },
-        deleteBasket:(state,action)=>{
+        clearBasket:(state,action)=>{
             state.items = []
         }
     }
 })
 
-export const {addToBasket, removeFromBasket} = basketSlice.actions
+export const {addToBasket, removeFromBasket, clearBasket} = basketSlice.actions
 // How we pull information from the Global state
 export const selectItems = (state) => state.basket.items
 export const selectTot = (state) => state.basket.total;
-
-export const selectTotal = (state) => state.basket.items.reduce((total, item)=>total + item.price,0)
+// USEFUL WHEN YOU ARE DEALING WITH THE PRODUCTS INDIVIDUALLY.
+// export const selectTotal = (state) => state.basket.items.reduce((total, item)=>total + item.price,0)
 
 export default basketSlice.reducer

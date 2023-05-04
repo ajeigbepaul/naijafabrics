@@ -28,7 +28,8 @@ function Login() {
       const res = await axios.post("/auth", { email, password });
       const accessToken = res?.data?.accessToken;
       const roles = res?.data?.roles;
-      setAuth({ email, roles, accessToken });
+      const id = res?.data?._id
+      setAuth({ id, email, roles, accessToken });
       navigate(from, { replace: true });
     } catch (error) {
       if (
@@ -41,8 +42,8 @@ function Login() {
     }
   };
   return (
-    <div className="log__container">
-      <div className="log__formWrapper">
+    <div className="col-sm-12 col-md-12 log__container">
+      <div className="col-sm-12 col-md-3 mx-auto log__formWrapper">
         <div className="log__title">SIGN IN</div>
         <form>
           <Input

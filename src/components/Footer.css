@@ -26,7 +26,7 @@
 .footer__right span{padding: 7px 0px; display: flex;align-items: center;}
 
 .footer__bottom{
-     color: #981ca3;
+     color: rgb(50, 49, 50);
      width: 100%; padding: 15px; text-align: center; display: flex; flex-direction: column;
 }
 .footer__bottom a{
@@ -57,7 +57,7 @@
 }
 
 
-@media screen and (max-width: 380px){
+@media screen and (max-width: 480px){
     .footer__center{display: block;}
     .footer{flex-direction: column; height: auto;}
   }

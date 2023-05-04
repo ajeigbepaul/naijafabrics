@@ -1,23 +1,32 @@
 .slider {
-  width: 100%;
-  position: relative;
+  /* width: 100%; */
+  /* position: relative; */
   height: auto;
-  display: flex;
-  max-width: 1300px;
-  margin:0px auto;
+  /* display: flex; */
+  /* max-width: 1300px; */
+  /* margin:0px auto; */
 }
-.hero__left{flex:0.2; background-color: white; margin: 10px 0px;
-  border-radius: 10px; display: flex; flex-direction: column;}
-.hero__category{display: flex;align-items: center;padding:5px 15px; color:rgb(71, 71, 71); cursor: pointer; transition: all ease 0.5s;}
-.hero__category:hover{color:#981ca3 ;}
-.hero__icon{font-size: 24px;}
-.hero__catTitle{padding: 10px 20px;}
+.hero__left{background-color: white; margin: 10px 0px;
+  border-radius: 10px; height: 85vh;display: flex; flex-direction: column;}
+.hero__category{display: flex;align-items: center;
+  padding:0px 15px; color:rgb(71, 71, 71); cursor: pointer; transition: all ease 0.5s;}
+.hero__category:hover{color:rgb(131, 156, 116) ;}
+.hero__icon{font-size: 24px; display: none;}
+.hero__catTitle{padding: 10px 20px; font-weight: 500; font-size: 14px;}
 .hero__title{margin-left: 10px; font-size: 14px;}
-.hero__center{flex:0.6; height: 80vh;  margin:10px 15px; border-radius: 10px; }
-/* background-color: #981ca3; max-width: 600px;*/
-.hero__right{flex:0.2; background-color: white;margin: 10px 0px; 
-  border-radius: 10px;}
+.hero__center{height: 85vh;  margin:10px 15px; border-radius: 10px; }
+.hero__right{ background-color: white;margin: 10px 0px; 
+  border-radius: 10px; height: 85vh;}
   .hero__rightheader{text-align: center; font-weight: 600; font-size: 18px; padding: 10px 0px;}
-@media screen and (max-width: 380px){
-  .slider{display: none;}
+@media screen and (max-width: 480px){
+  .slider{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero__left{height: 20vh; flex-direction: row; margin:15px 5px; }
+  .hero__category{display: flex!important; flex-direction: column;padding:0px 4px;align-items: center!important;}
+  .hero__icon{display: block;}
+  .hero__right{display: none;}
+  .hero__center{margin:0px 5px}
 }

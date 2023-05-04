@@ -41,10 +41,10 @@ function Register() {
     }
   };
   return (
-    <div className="reg__container">
-      <div className="reg__formWrapper">
+    <div className="col-sm-12 col-md-12 reg__container">
+      <div className="col-sm-12 col-md-3 reg__formWrapper">
         <div className="reg__title">Create An Account</div>
-        <form className='form_container'>
+        <form className="form_container">
           <Input
             placeholder="firstname"
             type="text"
