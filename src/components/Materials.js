@@ -20,7 +20,7 @@ function Materials() {
     getProduct();
   }, []);
   return (
-    <div className="material__container">
+    <div className="col-sm-12 col-md-12 material__container">
       <motion.h2
         initial={{
           opacity: 0,
@@ -33,13 +33,12 @@ function Materials() {
         Africa's Finest
       </motion.h2>
       <div className="material__content">
-        <h2 className="material__contentheader">Ankara </h2>
-        <span className="material__contentpara">- Africans Finest Fabrics</span>
-        {/* <p className="material__contentpara">
-          When you talk about quality and durability, our Ankara is such that
-          brings out the elegance, beauty and splendor of any design.
-        </p> */}
-        {/* <button className="material__contentbtn">Explore</button> */}
+        <h2 className="col-sm-12 col-md-4 mx-auto material__contentheader">
+          Ankara{" "}
+        </h2>
+        <span className="col-sm-12 col-md-4 mx-auto material__contentpara">
+          - Africans Finest Fabrics
+        </span>
       </div>
       <div className="ankara__wrapper">
         <div className="ankara__container">

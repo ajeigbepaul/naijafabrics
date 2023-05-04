@@ -14,16 +14,14 @@ function Footer() {
     <>
       <div className="footer">
         <div className="footer__left">
-          <h2>BamEmpire</h2>
+          <Link to="/">
+            <h2>NaijaFabrics</h2>
+          </Link>
           <div className="footer__desc">
             <p>
-              {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-            molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-            numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-             optio, eaque rerum! Provident similique accusantium nemo autem. */}
-              Bamempire is your Nos 1 stop shop for your wholesale products. We
-              deal with all kinds of Kiddies items, mens and women items,
-              accessories and kitchen utensils.
+              NaijaFabrics is your Nos 1 stop shop for your ready made bespoke
+              African Prints products. We also customise to your taste and
+              design.
             </p>
           </div>
           <div className="footer__social">
@@ -85,9 +83,9 @@ function Footer() {
       <div className="footer__bottom">
         {/* <button className="footerbtn"><Link to="/adminlogin">admin</Link></button> */}
         <span>
-          @copyright 2022{" "}
+          @copyright 2023{" "}
           <Link to="/admindashboard" className="admin">
-            BAMEMPIRE
+            NaijaFabrics
           </Link>{" "}
         </span>
         <span>Made By Diaryofatechnovies</span>

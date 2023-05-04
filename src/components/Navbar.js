@@ -11,7 +11,7 @@ function Navbar() {
           <div className="col-sm-12 col-md-3 nlg">
             <img src={logo} alt="logo" />
           </div>
-          <div className="col-sm-12 col-md-9">
+          <div className="col-sm-12 col-md-9 px-2">
             <Menu />
           </div>
         </div>

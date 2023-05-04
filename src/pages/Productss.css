@@ -22,7 +22,7 @@
     color: white !important;padding: 10px 10px; transition: all ease 0.5s; cursor: pointer;}
 .addToCart:hover{background-color: rgb(198, 232, 178);}
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 480px) {
     .productss__wrapper{
         flex-direction: column;
         padding:10px 0px;
@@ -32,5 +32,7 @@
     .productfilter__container{width: 100%;}
     .productaddContainer{width: 100%;}
     .productss__otherimages h2{padding-left: 15px;}
+    .productss__price{padding:10px 0px;}
+    .productss__desc{margin-bottom: 5px;}
 
 }

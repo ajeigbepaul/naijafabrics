@@ -56,7 +56,7 @@ function Products({ filtercolors, filtersize, sort, cat }) {
   }, [cat,sort,products]);
  
   return (
-    <div className="products">
+    <div className="col-sm-12 col-md-12 products">
       <motion.h2
         initial={{
           opacity: 0,

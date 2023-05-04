@@ -118,14 +118,14 @@ function Productss() {
           </div>
           <div className="productfilter__container">
             <div className="productfilter">
-              <h2>Colors : </h2>{" "}
+              <span>Colors : </span>{" "}
               <div className="filter__color">
                 {/* <FilterColor color={product.colors} /> */}
                 {product.colors}
               </div>
             </div>
             <div className="productfilter">
-              <h2>Size</h2>
+              <span>Size</span>
               <div className="selectprodsize">{product.size}</div>
             </div>
           </div>

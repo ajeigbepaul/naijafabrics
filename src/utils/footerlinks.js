@@ -5,24 +5,18 @@ export const linka = [
     
       },
       { id:2,
-        heading: "Mens",
-        links:"/products/:category"
+        heading: "children",
+        links:"/products/children"
     
       },
       { id:3,
         heading: "Women",
-        links:"/products/:category"
+        links:"/products/women"
     
       },
       { id:4,
         heading: "Accessories",
         links:"/products/:category"
-    
-      },
-    
-      { id:5,
-        heading: 'Tracking',
-        links:"/trackorder"
     
       },
 ]
