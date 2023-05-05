@@ -56,7 +56,8 @@ function Login() {
           <div>
             <Input
               placeholder="password"
-              type={ispasswordshown ? "text" : "password"}
+              type="password"
+              // type={ispasswordshown ? "text" : "password"}
               onChange={(e) => setPassword(e.target.value)}
               visible={true}
               onClick={toggleye}

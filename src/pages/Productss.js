@@ -105,7 +105,6 @@ function Productss() {
             <div className="productfilter">
               <span>Colors : </span>{" "}
               <div className="filter__color">
-                {/* <FilterColor color={product.colors} /> */}
                 {product.colors}
               </div>
             </div>

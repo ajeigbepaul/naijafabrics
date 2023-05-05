@@ -1,6 +1,4 @@
-import { FaMale, FaFemale, FaChild } from "react-icons/fa";
-import { MdOutlineFace, MdOutlineEmojiFoodBeverage } from "react-icons/md";
-import { GiGemChain } from "react-icons/gi";
+
 export const SlideData = [
   {
     id: 1,

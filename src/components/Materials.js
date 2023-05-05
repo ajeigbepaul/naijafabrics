@@ -8,12 +8,9 @@ function Materials() {
   useEffect(() => {
     const getProduct = async () => {
       try {
-        // const res = await axios.get(
-        //   cat
-        //     ? `https://bamempirebackend-production.up.railway.app/products?category=${cat}`
-        //     : "https://bamempirebackend-production.up.railway.app/products"
-        // );
-        const res = await axios.get(`http://localhost:8000/ankaras`);
+        const res = await axios.get(
+          `${process.env.REACT_APP_BASE_URL}/ankaras`
+        );
         setProducts(res.data);
       } catch (error) {}
     };

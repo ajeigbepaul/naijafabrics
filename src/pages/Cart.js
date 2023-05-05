@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import CartProduct from "../components/CartProduct";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { selectItems, selectTotal, selectTot } from "../slice/basketSlice";
+import { selectItems, selectTot } from "../slice/basketSlice";
 import useAuth from "../hooks/useAuth";
 
 

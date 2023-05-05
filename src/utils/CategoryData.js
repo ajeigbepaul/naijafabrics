@@ -1,6 +1,5 @@
-import { FaMale , FaFemale, FaChild} from "react-icons/fa";
-import { MdOutlineFace, MdOutlineEmojiFoodBeverage } from "react-icons/md";
-import { GiGemChain } from "react-icons/gi";
+import { FaFemale, FaChild} from "react-icons/fa";
+
 export const CategoryData = [
   {
     id: 1,
