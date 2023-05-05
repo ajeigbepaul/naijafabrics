@@ -72,7 +72,7 @@ const handleLogout = async()=>{
         </div>
       </div>
       {show && (
-        <div className="col-sm-12 col-md-2 bg-warning account__dropdown">
+        <div className="col-sm-12 col-md-2 account__dropdown">
           {auth?.email ? (
             <button className="account__btn" onClick={handleLogout}>
               Logout
