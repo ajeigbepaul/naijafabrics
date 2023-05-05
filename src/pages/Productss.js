@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Announcement from "../components/Announcement";
-import FilterColor from "../components/FilterColor";
+// import FilterColor from "../components/FilterColor";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "./Productss.css";
@@ -11,15 +11,7 @@ import {useDispatch} from "react-redux"
 import { addToBasket } from "../slice/basketSlice";
 import { toast } from "react-hot-toast";
 import useAuth from "../hooks/useAuth";
-// toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')
 // moment(new Date(row.time)).format("YYYY-MM-DD")}
-
-//Paul take note. implimentation of the discount into the total price
-//STEPS--
-// ADD THE DISCOUNT FIELD TO THE MODEL
-// ADD IT TO THE DISPATCH CALL
-// SUB FROM THE PRICE IN THE CARTREDUX
-// FINISHED
 function Productss() {
   const {qty} = useAuth() 
   const dispatch = useDispatch();
@@ -56,7 +48,6 @@ function Productss() {
     const getOtherimages = async()=>{
      try {
        const res = await publicRequest.get(`/images`)
-      //  console.log(res.data)
        setOtherimages(res.data)
        
      } catch (error) {
@@ -73,12 +64,6 @@ function Productss() {
       );
   }, [id,otherimages]);
   console.log(images)
-
-  // HANDLE ADD TO CART
-  // const handleAddToCart = () =>{
-  //  dispatch(addCart({...product,qty})) 
-  // }
-  // {otherimages.map(images=>)}
   return (
     <div className="productss__container">
       <Announcement />
