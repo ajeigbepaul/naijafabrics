@@ -1,15 +1,17 @@
 .success{
     height: 100vh;
-    display: flex;
+    /* display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    background: url("../regbg.jpg");
+    justify-content: center; */
+    background-image: url("../../public/images/ankaramaterial.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     
+}
+.s__page{
+    background-color: rgb(255, 255, 253);
 }
 .success h2{
     font-size: 14px;
@@ -19,12 +21,12 @@
     cursor: pointer;
     outline: none;
     margin-top: 10px;
-    background-color:rgb(107, 104, 92);
+    background-color: rgb(177, 202, 37);
     padding: 5px 10px;
     transition: all ease 0.4s;
 }
 
 .success button:hover{
-    color: white;
+    background-color: rgb(198, 232, 178);
 }
 .success span{font-size: 12px;}

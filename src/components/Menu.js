@@ -6,17 +6,19 @@ import React, { useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
 import useLogout from "../hooks/useLogout";
 import useAuth from "../hooks/useAuth";
+import { clearBasket } from "../slice/basketSlice";
 // import { useSelector, useDispatch } from "react-redux";
 // import { useNavigate } from "react-router-dom";
 // import { logout } from "../redux/userRedux";
 // import {clearCart} from "../redux/cartRedux"
 
 import "./Menu.css"
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { selectItems } from "../slice/basketSlice";
 function Menu() {
 const items = useSelector(selectItems)
 const [show,setShow] = useState(false)
+const dispatch = useDispatch()
 const logout = useLogout()
 const navigate = useNavigate()
 const {auth} = useAuth()
@@ -26,6 +28,7 @@ const handleShow = ()=>{
 }
 const handleLogout = async()=>{
   await logout();
+  dispatch(clearBasket())
   navigate('/')
   
 }

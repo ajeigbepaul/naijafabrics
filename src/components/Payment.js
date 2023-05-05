@@ -6,9 +6,6 @@ import Navbar from "./Navbar";
 import { PaystackButton } from 'react-paystack';
 import  {useSelector,useDispatch} from "react-redux"
 import {useNavigate} from "react-router-dom"
-import { pay } from "../redux/apiRedux";
-import { order } from "../redux/apiRedux"
-import {clearCart} from "../redux/cartRedux"
 import useAuth from "../hooks/useAuth";
 import { selectItems, selectTot, clearBasket } from "../slice/basketSlice";
 import { addOrder } from "../slice/orderSlice";

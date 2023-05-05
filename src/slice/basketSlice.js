@@ -30,6 +30,8 @@ export const basketSlice = createSlice({
         },
         clearBasket:(state,action)=>{
             state.items = []
+            state.quantity = 0
+            state.total = 0
         }
     }
 })
